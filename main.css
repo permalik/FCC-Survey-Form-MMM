@@ -1,0 +1,256 @@
+body {
+  background-color: #0c1985;
+  color: #d6af27;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+}
+
+#survey-form {
+  background-color: #1b3566;
+  border-radius: 25px;
+  height: 160vh;
+  margin: 2vh 7vw 5vh 7vw;
+  padding: 4vh 6vw;
+}
+
+#title {
+  color: #fff;
+  font-family: "Cuprum", sans-serif;
+  font-size: 7vw;
+  margin: 4vh 1vw 0.8vh;
+}
+
+#description {
+  color: #cacaca;
+  font-family: "Arima Madurai", serif;
+  font-size: 4.5vw;
+  letter-spacing: 0.15vw;
+  margin: 0.8vh 0 3vh;
+}
+
+/*All textual input fields: background color and borders*/
+#name,
+#email,
+#number,
+#dropdown,
+#dropdown-two,
+#thoughts {
+  background-color: #987843;
+  font-size: 2.2vh;
+  border: none;
+  border-radius: 5px;
+}
+/*---*/
+
+/*Spacing for Name, Email and Age fields*/
+#name-field,
+#email-field,
+#number-field {
+  margin-bottom: 3vh;
+}
+
+#name-field {
+  margin-top: 1vh;
+}
+/*---*/
+
+/*Structure of textual input fields*/
+#name,
+#email,
+#number {
+  width: 95%;
+  margin: 0 auto;
+  padding: 1vh 0 0.5vh 2vw;
+}
+
+#dropdown,
+#dropdown-two {
+  width: 75%;
+  padding: 1vh 0 0.25vh 1vw;
+}
+
+#thoughts {
+  width: 96%;
+  margin: 1vh auto;
+}
+/*---*/
+
+/*Remove standard dropdown options*/
+#forte-placeholder {
+  display: none;
+}
+
+#genre-placeholder {
+  display: none;
+}
+/*---*/
+
+#play-dropdown {
+  margin-bottom: 5vh;
+}
+
+#frequency {
+  margin: 5vh auto 5vh auto;
+}
+
+#frequency-title {
+  margin-bottom: 2vh;
+}
+
+[type="radio"],
+[for="audience"] {
+  line-height: 4.5vh;
+}
+
+#genre-dropdown {
+  margin: 5vh auto 7vh;
+}
+
+#jam-checkbox {
+  margin: 7vh auto 5vh;
+}
+
+#jam-heading {
+  line-height: 1vh;
+  margin-bottom: 4vh;
+}
+
+[type="checkbox"],
+[for="i-refuse"],
+[for="at-work"],
+[for="when-sleeping"],
+[for="while-eating"],
+[for="during-my-studies"],
+[for="in-the-car-driving"],
+[for="while-working-out"] {
+  line-height: 4.5vh;
+}
+
+#thoughts {
+  margin: 0;
+}
+
+::placeholder {
+  color: #000;
+}
+
+textarea::placeholder {
+  font-family: "Nunito", sans-serif;
+  padding: 0.5vh 0 0 1vw;
+}
+
+#submit {
+  background-color: #1c9e29;
+  color: #fff;
+  font-family: "Cuprum", sans-serif;
+  font-size: 5.8vw;
+  letter-spacing: 0.25vw;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  margin: 0.6rem auto 0.5rem;
+  padding: 0.7vh 4vh 0.25vh;
+}
+
+.circle {
+  background-color: #0422e4;
+  display: block;
+  border-radius: 50%;
+  width: 45vw;
+  height: 45vw;
+}
+
+.circle:hover {
+  transition: all 2s ease;
+  background-color: #5262cc;
+}
+
+.circle {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#circle-one {
+  position: fixed;
+  top: 2vh;
+  left: -8vw;
+  z-index: -1;
+}
+
+#circle-two {
+  position: fixed;
+  top: 1vh;
+  right: 1vw;
+  z-index: -1;
+}
+
+#circle-three {
+  position: fixed;
+  bottom: -10vh;
+  left: 0vw;
+  z-index: -1;
+}
+
+#circle-four {
+  position: fixed;
+  bottom: 0vh;
+  right: 1vw;
+  z-index: -1;
+}
+
+/*Responsive button*/
+@media only screen and (min-width: 451px) and (max-width: 550px) {
+  #submit {
+    font-size: 4.5vw;
+    margin: 0.5rem auto 0.4rem;
+    padding: 0.8vh 3vh;
+  }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 700px) {
+  #submit {
+    font-size: 3.8vw;
+    margin: 2.5h auto 4vh;
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1000px) {
+  #submit {
+    font-size: 2.8vw;
+  }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1200px) {
+  #submit {
+    font-size: 2.3vw;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1600px) {
+  #submit {
+    font-size: 1.7vw;
+  }
+}
+/*Responsive button*/
+
+@media only screen and (min-width: 701px) and (max-width: 1600px) {
+  #circle-three,
+  #circle-four {
+    display: none;
+  }
+}
