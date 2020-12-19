@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mass Music Measurements</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima+Madurai&family=Cuprum:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=Nunito:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="images/survey-mmm-logo.png" />
+    <script
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      async
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let thoughts = document.getElementById("thoughts");
+        thoughts.addEventListener("input", fontFam);
+      });
+
+      function fontFam(ev) {
+        let num = ev.charCode;
+        let letter = String.fromCharCode(num);
+        console.log(ev.type, num, letter, ev.target.value);
+        ev.target.style.fontFamily = "Nunito,sans-serif";
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Mass Music Measurements</h1>
+      <p id="description">what's in your ear?!</p>
+    </header>
+    <form action="" name="survey-form" id="survey-form">
+      <div id="name-field">
+        <label for="name-label" id="name-label">Name</label><br />
+        <input
+          type="text"
+          name="name-label"
+          id="name"
+          placeholder="Enter your name"
+          required
+        /><br />
+      </div>
+
+      <div id="email-field">
+        <label for="email-label" id="email-label">Email</label><br />
+        <input
+          type="email"
+          name="email-label"
+          id="email"
+          placeholder="Enter your email"
+          required
+        /><br />
+      </div>
+
+      <div id="number-field">
+        <label for="number-label" id="number-label">Age (optional)</label><br />
+        <input
+          type="number"
+          name="number-label"
+          id="number"
+          min="1"
+          max="121"
+          placeholder="Age"
+          required
+        />
+      </div>
+
+      <div id="play-dropdown">
+        <label for="box" id="box">How do you play?</label><br />
+        <select name="box" id="dropdown">
+          <option id="forte-placeholder">Choose your forte</option>
+          <option value="i prefer silence">I prefer silence</option>
+          <option value="whatever's on the radio">
+            Whatever's on the radio
+          </option>
+          <option value="The walkman on my hip">The walkman on my hip</option>
+          <option value="streaming is our future">
+            Streaming is our future
+          </option>
+          <option value="my record collection">My record collection</option>
+          <option value="i am a musician">I am a musician</option>
+        </select>
+      </div>
+
+      <div id="frequency">
+        <p id="frequency-title">At what frequency do you tune in?</p>
+        <input type="radio" name="audience" id="never" value="never" />
+        <label for="audience" id="never-label">Never</label><br />
+        <input
+          type="radio"
+          name="audience"
+          id="one-two"
+          value="one-two times a week"
+        />
+        <label for="audience" id="one-two-label">Once or twice a week</label
+        ><br />
+        <input
+          type="radio"
+          name="audience"
+          id="three-four"
+          value="three-four times a week"
+        />
+        <label for="audience" id="three-four-label"
+          >Three to four times each week</label
+        ><br />
+        <input
+          type="radio"
+          name="audience"
+          id="five-seven"
+          value="five to seven times a week"
+        />
+        <label for="audience" id="five-seven-label"
+          >Five to seven times every week</label
+        ><br />
+        <input type="radio" name="audience" id="all-day" value="all day" />
+        <label for="audience" id="all-day-label">IV drip...All day</label>
+      </div>
+
+      <div id="genre-dropdown">
+        <label for="box-two" id="box-two">Which genre wins?</label><br />
+        <select name="box-two" id="dropdown-two">
+          <option id="genre-placeholder">None</option>
+          <option value="classical">Classical</option>
+          <option value="jazz">Jazz</option>
+          <option value="blues">Blues</option>
+          <option value="country">Country</option>
+          <option value="rock">Rock</option>
+          <option value="pop">Pop</option>
+          <option value="electronic">Electronic</option>
+          <option value="soul">Soul</option>
+          <option value="r&b">R&B</option>
+          <option value="hip-hop">Hip-Hop</option>
+        </select>
+      </div>
+
+      <div id="jam-checkbox">
+        <div id="jam-heading">
+          <p id="jam-title">When do you jam?</p>
+          <p id="jam-caveat">(Choose all that apply)</p>
+        </div>
+        <input type="checkbox" name="i-refuse" id="i-refuse" value="i refuse" />
+        <label for="i-refuse">I refuse</label><br />
+        <input
+          type="checkbox"
+          name="when-sleeping"
+          id="when-sleeping"
+          value="when sleeping"
+        />
+        <label for="when-sleeping">When sleeping</label><br />
+        <input type="checkbox" name="at-work" id="at-work" value="at work" />
+        <label for="at-work">At work</label><br />
+        <input
+          type="checkbox"
+          name="while-eating"
+          id="while-eating"
+          value="while eating"
+        />
+        <label for="while-eating">While Eating</label><br />
+        <input
+          type="checkbox"
+          name="during-my-studies"
+          id="during-my-studies"
+          value="during my studies"
+        />
+        <label for="during-my-studies">During my studies</label><br />
+        <input
+          type="checkbox"
+          name="in-the-car-driving"
+          id="in-the-car-driving"
+          value="in the car driving"
+        />
+        <label for="in-the-car-driving">In the car driving</label><br />
+        <input
+          type="checkbox"
+          name="while-working-out"
+          id="while-working-out"
+          value="while working out"
+        />
+        <label for="while-working-out">While working out</label>
+      </div>
+
+      <div id="thoughts-textarea">
+        <label for="thoughts">Additional thoughts?</label><br />
+        <textarea
+          name="thoughts"
+          id="thoughts"
+          cols="30"
+          rows="5"
+          placeholder="Enter any comments here..."
+        ></textarea>
+      </div>
+
+      <div id="submit-button">
+        <button
+          action=""
+          type="submit"
+          form="survey-form"
+          id="submit"
+          value="submit"
+        >
+          submit
+        </button>
+      </div>
+    </form>
+
+    <div class="container">
+      <div class="circle" id="circle-one"></div>
+      <div class="circle" id="circle-two"></div>
+      <div class="circle" id="circle-three"></div>
+      <div class="circle" id="circle-four"></div>
+    </div>
+  </body>
+</html>
